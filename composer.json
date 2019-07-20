@@ -1,0 +1,16 @@
+{
+    "name": "fabiomattei/ud-demo",
+    "description": "Demo app for uglyduckling framework",
+    "type": "project",
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Fabio Mattei",
+            "email": "burattino@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fabiomattei/uglyduckling": "dev-master"
+    }
+}
