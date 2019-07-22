@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Creato il: Ott 28, 2018 alle 11:54
--- Versione del server: 10.1.21-MariaDB-1~jessie
--- Versione PHP: 7.2.6
+-- Creato il: Lug 22, 2019 alle 17:58
+-- Versione del server: 10.4.3-MariaDB-1:10.4.3+maria~bionic
+-- Versione PHP: 7.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `articles`
+--
+
+CREATE TABLE `articles` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `updated` date NOT NULL,
+  `created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `articles`
+--
+
+INSERT INTO `articles` (`id`, `title`, `description`, `updated`, `created`) VALUES
+(2, 'title', 'description', '2019-07-13', '2019-07-13'),
+(3, 'lalalala', 'liloli', '2019-07-13', '2019-07-13');
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `documentsubscriptionv1`
 --
 
@@ -32,7 +54,7 @@ CREATE TABLE `documentsubscriptionv1` (
   `id` int(11) UNSIGNED NOT NULL,
   `sourceuserid` int(11) UNSIGNED DEFAULT NULL,
   `sourcegroup` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `name` text COLLATE utf8_bin,
+  `name` text COLLATE utf8_bin DEFAULT NULL,
   `amount` decimal(16,2) DEFAULT NULL,
   `duedate` date DEFAULT NULL,
   `docstatus` varchar(255) COLLATE utf8_bin DEFAULT NULL,
@@ -67,7 +89,7 @@ INSERT INTO `documentsubscriptionv1` (`id`, `sourceuserid`, `sourcegroup`, `name
 
 CREATE TABLE `projectfile` (
   `prjfi_id` int(10) UNSIGNED NOT NULL,
-  `prjfi_siteid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `prjfi_siteid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `prjfi_pwpid` int(10) UNSIGNED NOT NULL,
   `prjfi_usrid` int(10) UNSIGNED NOT NULL,
   `prjfi_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -86,7 +108,7 @@ CREATE TABLE `projectfile` (
 
 CREATE TABLE `projectmessage` (
   `prjme_id` int(10) UNSIGNED NOT NULL,
-  `prjme_siteid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `prjme_siteid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `prjme_usrid` int(10) UNSIGNED NOT NULL,
   `prjme_pwpid` int(10) UNSIGNED NOT NULL,
   `prjme_prjmeid` int(10) UNSIGNED NOT NULL,
@@ -103,7 +125,7 @@ CREATE TABLE `projectmessage` (
 
 CREATE TABLE `projectmilestone` (
   `prjmi_id` int(10) UNSIGNED NOT NULL,
-  `prjmi_siteid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `prjmi_siteid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `prjmi_usrid` int(10) UNSIGNED NOT NULL,
   `prjmi_pwpid` int(10) UNSIGNED NOT NULL,
   `prjmi_body` text COLLATE utf8_bin NOT NULL,
@@ -120,7 +142,7 @@ CREATE TABLE `projectmilestone` (
 
 CREATE TABLE `projecttask` (
   `prjtk_id` int(10) UNSIGNED NOT NULL,
-  `prjtk_siteid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `prjtk_siteid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `prjtk_usrid` int(10) UNSIGNED NOT NULL,
   `prjtk_pwpid` int(10) UNSIGNED NOT NULL,
   `prjtk_prjmiid` int(10) UNSIGNED NOT NULL,
@@ -176,7 +198,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `usr_email`, `usr_hashedpsw`, `usr_password_updated`, `usr_updated`, `usr_created`) VALUES
 (1, 'administrationgroup', 'Admin', '', 'admin', '$2y$10$gUWxjdAJRE.KyWqEZh4w1.kRDAumgVamek.BBq.Li2CMkK7GGeeV2', '2018-10-28 10:04:49', '2018-10-21 10:13:39', '2018-10-21 00:00:00'),
-(2, 'managergroup', 'Manager', '', 'manager', '$2y$10$YmsVMDQrYjnEdbkqfB5pNuLzyeMQep0C/ahaRWQSs/AN63/U5SXTW', '2018-08-07 00:00:00', '2018-08-07 00:00:00', '2018-08-07 00:00:00');
+(2, 'author', 'Manager', '', 'manager', '$2y$10$YmsVMDQrYjnEdbkqfB5pNuLzyeMQep0C/ahaRWQSs/AN63/U5SXTW', '2018-08-07 00:00:00', '2018-08-07 00:00:00', '2018-08-07 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -187,7 +209,7 @@ INSERT INTO `user` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `us
 CREATE TABLE `usergroup` (
   `ug_id` int(10) UNSIGNED NOT NULL,
   `ug_groupslug` varchar(80) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `ug_userid` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `ug_userid` int(11) UNSIGNED NOT NULL DEFAULT 0,
   `ug_updated` datetime NOT NULL,
   `ug_created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -195,6 +217,12 @@ CREATE TABLE `usergroup` (
 --
 -- Indici per le tabelle scaricate
 --
+
+--
+-- Indici per le tabelle `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `documentsubscriptionv1`
@@ -247,6 +275,12 @@ ALTER TABLE `usergroup`
 --
 -- AUTO_INCREMENT per le tabelle scaricate
 --
+
+--
+-- AUTO_INCREMENT per la tabella `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `documentsubscriptionv1`

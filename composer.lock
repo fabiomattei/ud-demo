@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "1900a9df29eb7c6858cf7987d73935c31b0fa74a"
+                "reference": "fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/1900a9df29eb7c6858cf7987d73935c31b0fa74a",
-                "reference": "1900a9df29eb7c6858cf7987d73935c31b0fa74a",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9",
+                "reference": "fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2019-07-22T15:24:00+00:00"
+            "time": "2019-07-22T16:30:45+00:00"
         },
         {
             "name": "markbaker/complex",
