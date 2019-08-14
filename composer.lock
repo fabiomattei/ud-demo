@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9"
+                "reference": "2128e91712af771fc200b4148133b4052d8acebf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9",
-                "reference": "fcd5e8e9889cd5cf3edde92fb7847bf69ebbf5b9",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/2128e91712af771fc200b4148133b4052d8acebf",
+                "reference": "2128e91712af771fc200b4148133b4052d8acebf",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2019-07-22T16:30:45+00:00"
+            "time": "2019-08-12T21:38:03+00:00"
         },
         {
             "name": "markbaker/complex",
@@ -226,12 +226,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "fff54d4aad0b9eb7e9946674b1f00d6b826be876"
+                "reference": "216cf03ca5ca3093009dc946f7fb88f2a866198b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/fff54d4aad0b9eb7e9946674b1f00d6b826be876",
-                "reference": "fff54d4aad0b9eb7e9946674b1f00d6b826be876",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/216cf03ca5ca3093009dc946f7fb88f2a866198b",
+                "reference": "216cf03ca5ca3093009dc946f7fb88f2a866198b",
                 "shasum": ""
             },
             "require": {
@@ -287,7 +287,7 @@
                 "php",
                 "utf-8"
             ],
-            "time": "2019-06-17T09:03:14+00:00"
+            "time": "2019-08-05T10:49:27+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -295,12 +295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72"
+                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
-                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/007c053ae6f31bba39dfa19a7726f56e9763bbea",
+                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea",
                 "shasum": ""
             },
             "require": {
@@ -335,7 +335,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-04-07T13:18:21+00:00"
+            "time": "2019-08-09T12:45:53+00:00"
         },
         {
             "name": "paragonie/random_compat",
