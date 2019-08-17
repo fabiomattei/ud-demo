@@ -7,7 +7,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $severWrapper = new Fabiom\UglyDuckling\Common\Wrappers\ServerWrapper;
 $sessionWrapper = new Fabiom\UglyDuckling\Common\Wrappers\SessionWrapper;
 $htmlTemplateLoader = new Fabiom\UglyDuckling\Common\Utils\HtmlTemplateLoader;
-$htmlTemplateLoader->setPath('vendor/fabiomattei/uglyduckling/src/Templates/HTML/');
+$htmlTemplateLoader->setPath('../vendor/fabiomattei/uglyduckling/src/Templates/HTML/');
 
 $messagesBlock = new Fabiom\UglyDuckling\Common\Blocks\BaseHTMLMessages();
 $messagesBlock->setHtmlTemplateLoader( $htmlTemplateLoader );
@@ -21,7 +21,7 @@ $setup->setEmptyTemplateFileName('empty');
 $setup->setBasePath('http://localhost:18080/');
 $setup->setPathToApp('/uglyduckling/');
 $setup->setJsonPath('Json/index.json');
-$setup->setHTMLTemplatePath('vendor/fabiomattei/uglyduckling/src/Templates/');
+$setup->setHTMLTemplatePath('../vendor/fabiomattei/uglyduckling/src/Templates/');
 
 $dbconnection = new Fabiom\UglyDuckling\Common\Database\DBConnection( 
 	'mysql:host=mariadb:3306;dbname=',
