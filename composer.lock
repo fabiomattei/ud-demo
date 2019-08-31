@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "8b7367bcdf0d97580ac14dbd950c90ad5038c5cf"
+                "reference": "1d1221b3c655f7d240c85a1975ef49311b71b1b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/8b7367bcdf0d97580ac14dbd950c90ad5038c5cf",
-                "reference": "8b7367bcdf0d97580ac14dbd950c90ad5038c5cf",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/1d1221b3c655f7d240c85a1975ef49311b71b1b6",
+                "reference": "1d1221b3c655f7d240c85a1975ef49311b71b1b6",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2019-08-20T14:25:29+00:00"
+            "time": "2019-08-31T12:41:41+00:00"
         },
         {
             "name": "markbaker/complex",
@@ -295,12 +295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea"
+                "reference": "9012edbd1604a93cee7e7422d07a2c5776c56e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/007c053ae6f31bba39dfa19a7726f56e9763bbea",
-                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/9012edbd1604a93cee7e7422d07a2c5776c56e0c",
+                "reference": "9012edbd1604a93cee7e7422d07a2c5776c56e0c",
                 "shasum": ""
             },
             "require": {
@@ -335,7 +335,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-08-09T12:45:53+00:00"
+            "time": "2019-08-26T15:40:39+00:00"
         },
         {
             "name": "paragonie/random_compat",
