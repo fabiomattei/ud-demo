@@ -8,15 +8,15 @@
       ]
     },
     "query": {
-      "sql":"select id, title, description, created FROM articles WHERE id=(SELECT MAX(id) FROM articles);",
+      "sql":"select id, title, SUBSTRING(description, 1, 250) as descriptionshort, created FROM articles WHERE id=(SELECT MAX(id) FROM articles);",
       "parameters":[]
     },
     "info": {
       "title": "",
       "fields": [
-        { "type":"textfield", "label":"Title", "value":"title", "width":"6", "row":"1" },
-        { "type":"textarea", "label":"Description", "value":"description", "width":"6", "row":"1" },
-        { "type":"date", "label":"Created on", "value":"created", "width":"12", "row":"2" }
+        { "type":"textfield", "label":"Title", "value":"title", "width":"12", "row":"1" },
+        { "type":"textarea", "label":"Description", "value":"descriptionshort", "width":"12", "row":"2" },
+        { "type":"date", "label":"Created on", "value":"created", "width":"12", "row":"3" }
       ]
     }
   }
