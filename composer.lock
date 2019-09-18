@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "1d1221b3c655f7d240c85a1975ef49311b71b1b6"
+                "reference": "ba4d61e36b5ce972248429009f6ece9011e8579a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/1d1221b3c655f7d240c85a1975ef49311b71b1b6",
-                "reference": "1d1221b3c655f7d240c85a1975ef49311b71b1b6",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/ba4d61e36b5ce972248429009f6ece9011e8579a",
+                "reference": "ba4d61e36b5ce972248429009f6ece9011e8579a",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2019-08-31T12:41:41+00:00"
+            "time": "2019-09-04T16:15:08+00:00"
         },
         {
             "name": "markbaker/complex",
@@ -226,12 +226,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "216cf03ca5ca3093009dc946f7fb88f2a866198b"
+                "reference": "b108f9f72b7c1b7917ebf82e68314fd3a98df7e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/216cf03ca5ca3093009dc946f7fb88f2a866198b",
-                "reference": "216cf03ca5ca3093009dc946f7fb88f2a866198b",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/b108f9f72b7c1b7917ebf82e68314fd3a98df7e1",
+                "reference": "b108f9f72b7c1b7917ebf82e68314fd3a98df7e1",
                 "shasum": ""
             },
             "require": {
@@ -287,7 +287,7 @@
                 "php",
                 "utf-8"
             ],
-            "time": "2019-08-05T10:49:27+00:00"
+            "time": "2019-09-11T08:21:31+00:00"
         },
         {
             "name": "myclabs/deep-copy",
