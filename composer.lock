@@ -226,12 +226,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "b108f9f72b7c1b7917ebf82e68314fd3a98df7e1"
+                "reference": "21ce5659eba8ce26cbcfac4b36f4de89d53ea0bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/b108f9f72b7c1b7917ebf82e68314fd3a98df7e1",
-                "reference": "b108f9f72b7c1b7917ebf82e68314fd3a98df7e1",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/21ce5659eba8ce26cbcfac4b36f4de89d53ea0bc",
+                "reference": "21ce5659eba8ce26cbcfac4b36f4de89d53ea0bc",
                 "shasum": ""
             },
             "require": {
@@ -287,7 +287,7 @@
                 "php",
                 "utf-8"
             ],
-            "time": "2019-09-11T08:21:31+00:00"
+            "time": "2019-09-18T12:31:33+00:00"
         },
         {
             "name": "myclabs/deep-copy",
