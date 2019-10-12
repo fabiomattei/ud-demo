@@ -2,9 +2,9 @@
 
 namespace Fabiom\UDDemo\Custom\JsonTemplates;
 
-use Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplate;
+use Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplateFactory;
 
-class CustomTemplateBuildersFactory extends JsonTemplate {
+class CustomJsonTemplateFactory extends JsonTemplateFactory {
 
     /**
      * PanelBuilder constructor.
