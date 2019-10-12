@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Creato il: Set 18, 2019 alle 18:34
+-- Creato il: Ott 12, 2019 alle 19:59
 -- Versione del server: 10.4.3-MariaDB-1:10.4.3+maria~bionic
 -- Versione PHP: 7.2.13
 
@@ -46,6 +46,28 @@ INSERT INTO `articles` (`id`, `title`, `description`, `updated`, `created`) VALU
 (3, 'My third article', 'Lorem ipsum dolor sit amet, elitr volumus dolores pro ei, qui ei mollis senserit, eu labore docendi rationibus quo. Ut cum commodo nonumes reprimique. Eum et meis consulatu efficiendi, sea tacimates signiferumque ut. Ne vel convenire ocurreret, ea nec etiam possit. Ea populo omittam partiendo est.\r\n\r\nPlatonem incorrupte cum ei, te has probo animal, putant equidem offendit in usu. Te ridens blandit pri. Ne adversarium accommodare instructior vim, mutat electram dissentiunt ea vix, ad malis eloquentiam adversarium pro. Ut has postea invidunt. Facete perpetua per ut, nulla virtute denique eu eos, postea propriae suavitate vix no.\r\n\r\nDicta fastidii ei nec, nec corrumpit vituperata omittantur ei. In postulant torquatos dissentiet est, sit molestie noluisse accommodare cu. Nulla nemore copiosae cum in, ne veri quas etiam quo. Nec an magna reque, eam nibh partem in. Duo augue prodesset ex, has oratio inimicus accommodare ei.\r\n\r\nEt eam dolore salutatus, eum brute omnes ut. In eum tota tractatos interpretaris, nemore aliquid indoctum sea ne. Cu his prima adhuc audiam, agam sapientem mei ei. Agam diceret vivendo vix et, eu alia facilis cum, amet percipit vis te. Erant adipiscing ut per, his vide recteque ex. Quidam incorrupte ex pro, at has fugit verear nominati. Qui an platonem ocurreret, vix omnesque percipit incorrupte et.\r\n\r\nDiam integre aliquid eu nam, eu eruditi argumentum omittantur vel. Vix no noster mollis sententiae. Ut tale dictas evertitur sed, convenire similique inciderint id sea, eam aperiam equidem no. Nec diam utamur id, ludus doming an mea. Ei ius salutatus dignissim.', '2019-09-18', '2019-09-18'),
 (4, 'My forth article', 'Lorem ipsum dolor sit amet, elitr volumus dolores pro ei, qui ei mollis senserit, eu labore docendi rationibus quo. Ut cum commodo nonumes reprimique. Eum et meis consulatu efficiendi, sea tacimates signiferumque ut. Ne vel convenire ocurreret, ea nec etiam possit. Ea populo omittam partiendo est.\r\n\r\nPlatonem incorrupte cum ei, te has probo animal, putant equidem offendit in usu. Te ridens blandit pri. Ne adversarium accommodare instructior vim, mutat electram dissentiunt ea vix, ad malis eloquentiam adversarium pro. Ut has postea invidunt. Facete perpetua per ut, nulla virtute denique eu eos, postea propriae suavitate vix no.\r\n\r\nDicta fastidii ei nec, nec corrumpit vituperata omittantur ei. In postulant torquatos dissentiet est, sit molestie noluisse accommodare cu. Nulla nemore copiosae cum in, ne veri quas etiam quo. Nec an magna reque, eam nibh partem in. Duo augue prodesset ex, has oratio inimicus accommodare ei.\r\n\r\nEt eam dolore salutatus, eum brute omnes ut. In eum tota tractatos interpretaris, nemore aliquid indoctum sea ne. Cu his prima adhuc audiam, agam sapientem mei ei. Agam diceret vivendo vix et, eu alia facilis cum, amet percipit vis te. Erant adipiscing ut per, his vide recteque ex. Quidam incorrupte ex pro, at has fugit verear nominati. Qui an platonem ocurreret, vix omnesque percipit incorrupte et.\r\n\r\nDiam integre aliquid eu nam, eu eruditi argumentum omittantur vel. Vix no noster mollis sententiae. Ut tale dictas evertitur sed, convenire similique inciderint id sea, eam aperiam equidem no. Nec diam utamur id, ludus doming an mea. Ei ius salutatus dignissim.', '2019-09-18', '2019-09-18'),
 (5, 'My fifth article', 'Lorem ipsum dolor sit amet, elitr volumus dolores pro ei, qui ei mollis senserit, eu labore docendi rationibus quo. Ut cum commodo nonumes reprimique. Eum et meis consulatu efficiendi, sea tacimates signiferumque ut. Ne vel convenire ocurreret, ea nec etiam possit. Ea populo omittam partiendo est.\r\n\r\nPlatonem incorrupte cum ei, te has probo animal, putant equidem offendit in usu. Te ridens blandit pri. Ne adversarium accommodare instructior vim, mutat electram dissentiunt ea vix, ad malis eloquentiam adversarium pro. Ut has postea invidunt. Facete perpetua per ut, nulla virtute denique eu eos, postea propriae suavitate vix no.\r\n\r\nDicta fastidii ei nec, nec corrumpit vituperata omittantur ei. In postulant torquatos dissentiet est, sit molestie noluisse accommodare cu. Nulla nemore copiosae cum in, ne veri quas etiam quo. Nec an magna reque, eam nibh partem in. Duo augue prodesset ex, has oratio inimicus accommodare ei.\r\n\r\nEt eam dolore salutatus, eum brute omnes ut. In eum tota tractatos interpretaris, nemore aliquid indoctum sea ne. Cu his prima adhuc audiam, agam sapientem mei ei. Agam diceret vivendo vix et, eu alia facilis cum, amet percipit vis te. Erant adipiscing ut per, his vide recteque ex. Quidam incorrupte ex pro, at has fugit verear nominati. Qui an platonem ocurreret, vix omnesque percipit incorrupte et.\r\n\r\nDiam integre aliquid eu nam, eu eruditi argumentum omittantur vel. Vix no noster mollis sententiae. Ut tale dictas evertitur sed, convenire similique inciderint id sea, eam aperiam equidem no. Nec diam utamur id, ludus doming an mea. Ei ius salutatus dignissim.', '2019-09-19', '2019-09-19');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `requests`
+--
+
+CREATE TABLE `requests` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `amount` decimal(8,2) NOT NULL,
+  `duedate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `requests`
+--
+
+INSERT INTO `requests` (`id`, `name`, `amount`, `duedate`) VALUES
+(1, 'Fabio', '13.45', '2019-10-02'),
+(2, 'John', '12.54', '2019-10-02'),
+(3, 'Hellen', '10.00', '2019-10-02');
 
 -- --------------------------------------------------------
 
@@ -98,6 +120,12 @@ ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indici per le tabelle `requests`
+--
+ALTER TABLE `requests`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indici per le tabelle `user`
 --
 ALTER TABLE `user`
@@ -118,6 +146,12 @@ ALTER TABLE `usergroup`
 --
 ALTER TABLE `articles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT per la tabella `requests`
+--
+ALTER TABLE `requests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `user`
