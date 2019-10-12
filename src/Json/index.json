@@ -5,6 +5,7 @@
     { "path":"./Json/groups/author.json", "type":"group", "name":"author" },
     { "path":"./Json/groups/administrationgroup.json", "type":"group", "name":"administrationgroup" },
     { "path":"./Json/articles/articlestable.json", "type":"table", "name":"articlestable" },
+    { "path":"./Json/reportstable.json", "type":"table", "name":"reportstable" },
     { "path":"./Json/articles/newarticleform.json", "type":"form", "name":"newarticleform" },
     { "path":"./Json/articles/editarticleform.json", "type":"form", "name":"editarticleform" },
     { "path":"./Json/articles/deletearticletransaction.json", "type":"transaction", "name":"deletearticletransaction" },

@@ -1,0 +1,22 @@
+{
+  "name": "reportstable",
+  "description": "This resource was created in order to make a quick demo for the home page of uddocs",
+  "metadata": { "type":"table", "version": "1" },
+  "allowedgroups": [ "author" ],
+  "get": {
+    "request": {
+      "parameters": []
+    },
+    "query": {
+      "sql": "select id, name, amount, duedate FROM requests;"
+    },
+    "table": {
+      "title": "My table",
+      "fields": [
+        {"headline": "Name", "sqlfield": "name"},
+        {"headline": "Amount", "sqlfield": "amount"},
+        {"headline": "Due date", "sqlfield": "duedate"}
+      ]
+    }
+  }
+}
