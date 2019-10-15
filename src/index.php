@@ -33,7 +33,8 @@ $dbconnection = new Fabiom\UglyDuckling\Common\Database\DBConnection(
 $request = new Fabiom\UglyDuckling\Common\Request\Request();
 $request->setServerRequestURI( $severWrapper->getRequestURI() );
 
-$router = new Fabiom\UglyDuckling\Common\Router\Router( $setup->getBasePath() );
+$routerContainer = new Fabiom\UglyDuckling\Common\Router\RoutersContainer( $setup->getBasePath() );
+$routerContainer->addRouter( new Fabiom\UglyDuckling\Common\Router\Router( $setup->getBasePath() ) )
 
 $controller = $router->getController( $request->getAction() );
 
@@ -46,7 +47,7 @@ $jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling
 if ( $sessionWrapper->isUserLoggedIn() ) {
 	// settings for logged in user
 	$controller->makeAllPresets(
-		$router,
+		$routerContainer,
     	$setup, 
     	$request,
 		$severWrapper,
@@ -63,7 +64,7 @@ if ( $sessionWrapper->isUserLoggedIn() ) {
 } else {
 	// settings for user that has not logged in the system
 	$controller->makeAllPresets(
-		$router,
+		$routerContainer,
     	$setup, 
     	$request,
 		$severWrapper,
