@@ -14,8 +14,8 @@
         { "headline": "Due date", "sqlfield":"duedate" }
       ],
       "actions": [
-        { "lable":"Edit", "action":"entityform", "resource":"formrequestv1", "parameters":[{"name":"id", "sqlfield":"id"}] },
-        { "lable":"Edit", "action":"entitydelete", "resource":"entitydelete", "parameters":[{"name":"id", "sqlfield":"id"}] }
+          {"label": "Edit", "resource": "editarticleform", "parameters":[{"name": "id", "sqlfield": "id"}] },
+          {"label": "Delete", "resource": "deletearticletransaction", "parameters":[{"name": "id", "sqlfield": "id"}] }
       ]
     },
     "form": {
@@ -36,7 +36,8 @@
         {"headline": "Date", "sqlfield": "created"}
       ],
       "actions": [
-        {"label": "Info", "action": "entityinfo", "resource": "articleinfov1", "parameters":[{"name": "id", "sqlfield": "id"}] }
+          {"label": "Edit", "resource": "editarticleform", "parameters":[{"name": "id", "sqlfield": "id"}] },
+          {"label": "Delete", "resource": "deletearticletransaction", "parameters":[{"name": "id", "sqlfield": "id"}] }
       ]
     },
     "form": {
