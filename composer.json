@@ -11,10 +11,10 @@
         }
     ],
     "config": {
-    "platform": {
-           "php": "7.4.0",
-           "ext-gd": "2"
-       }
+        "platform": {
+            "php": "7.4.0",
+            "ext-gd": "2"
+        }
     },
     "minimum-stability": "dev",
     "require": {
