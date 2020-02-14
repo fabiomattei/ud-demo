@@ -3,6 +3,7 @@ services:
 
   phpinfo:
     build: ./
+    container_name: uddemo-php
     ports:
       - "18080:80"
     networks:
@@ -14,6 +15,7 @@ services:
 
   mariadb:
     build: ./docker/mariadb
+    container_name: uddemo-mariadb
     volumes:
       - ./data:/var/lib/mysql
     ports:
@@ -28,7 +30,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: uddemo-phpmyadmin
     links:
       - mariadb
     ports:
