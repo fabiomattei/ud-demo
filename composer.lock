@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df8401d13c90c211f2b199b34fcf7db5",
+    "content-hash": "61d9ebd72aaf398bad511c7693729ba1",
     "packages": [
         {
             "name": "fabiomattei/uglyduckling",
@@ -12,17 +12,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "207ed9bb0515aa70023abc21270d12196f20e35e"
+                "reference": "cce05098106d94e3118e098cb599aedf8ecff709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/207ed9bb0515aa70023abc21270d12196f20e35e",
-                "reference": "207ed9bb0515aa70023abc21270d12196f20e35e",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/cce05098106d94e3118e098cb599aedf8ecff709",
+                "reference": "cce05098106d94e3118e098cb599aedf8ecff709",
                 "shasum": ""
             },
             "require": {
                 "mpdf/mpdf": "^7.1",
-                "php": ">=7.4",
+                "php": ">=7.3",
                 "phpoffice/phpspreadsheet": "^1.5",
                 "twbs/bootstrap": "^4",
                 "wixel/gump": "dev-master"
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2019-12-01T07:14:47+00:00"
+            "time": "2020-02-14T06:31:36+00:00"
         },
         {
             "name": "markbaker/complex",
@@ -225,12 +225,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "12577b56fb51c2f4254a0beb0ca14d6d423da193"
+                "reference": "7615414f5bc42a77d1986ea2c87912e4302fc4ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/12577b56fb51c2f4254a0beb0ca14d6d423da193",
-                "reference": "12577b56fb51c2f4254a0beb0ca14d6d423da193",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/7615414f5bc42a77d1986ea2c87912e4302fc4ad",
+                "reference": "7615414f5bc42a77d1986ea2c87912e4302fc4ad",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +286,7 @@
                 "php",
                 "utf-8"
             ],
-            "time": "2019-12-10T09:51:08+00:00"
+            "time": "2020-02-05T08:46:07+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -294,12 +294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "9012edbd1604a93cee7e7422d07a2c5776c56e0c"
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/9012edbd1604a93cee7e7422d07a2c5776c56e0c",
-                "reference": "9012edbd1604a93cee7e7422d07a2c5776c56e0c",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/b2c28789e80a97badd14145fda39b545d83ca3ef",
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-08-26T15:40:39+00:00"
+            "time": "2020-01-17T21:11:47+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -731,7 +731,7 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.4.0",
+        "php": "7.3.0",
         "ext-gd": "2"
     }
 }
