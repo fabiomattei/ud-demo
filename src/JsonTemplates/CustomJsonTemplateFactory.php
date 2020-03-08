@@ -26,6 +26,7 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
 
         if ($resource->metadata->type == JsonTemplateExample::blocktype) {
             $this->jsonTemplateExample->setResource($resource);
+			$this->jsonTemplateExample->setSessionWrapper($this->sessionWrapper);
             $this->jsonTemplateExample->setHtmlTemplateLoader($this->htmlTemplateLoader);
             $this->jsonTemplateExample->setJsonloader($this->jsonloader);
             $this->jsonTemplateExample->setRouter($this->router);
