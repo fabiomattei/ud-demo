@@ -64,7 +64,7 @@ $pageStatus->setFilesParameters( $_FILES );
 $pageStatus->setDbconnection( $dbconnection );
 
 $applicationBuilder = new Fabiom\UglyDuckling\Common\Status\ApplicationBuilder;
-$applicationBuilder->setRouterContainer($routerContainer);
+$applicationBuilder->setRouterContainer($routersContainer);
 $applicationBuilder->setSetup($setup);
 $applicationBuilder->setSecurityChecker(new Fabiom\UglyDuckling\Common\SecurityCheckers\PrivateSecurityChecker());
 $applicationBuilder->setDbconnection($dbconnection);

@@ -3,12 +3,13 @@
 namespace Fabiom\UDDemo\Controllers;
 
 use Fabiom\UglyDuckling\Common\Controllers\Controller;
+use Fabiom\UglyDuckling\Common\Router\AdminRouter;
+use Fabiom\UglyDuckling\Common\Router\ResourceRouter;
 use Fabiom\UglyDuckling\Common\Setup\SessionJsonSetup;
 use Fabiom\UglyDuckling\Templates\Blocks\Menus\PublicMenu;
 use Fabiom\UglyDuckling\Templates\Blocks\Login\LoginForm;
 use Fabiom\UglyDuckling\BusinessLogic\User\Daos\UserDao;
 use Fabiom\UglyDuckling\BusinessLogic\User\UseCases\UserCanLogIn;
-use Fabiom\UglyDuckling\Common\Router\Router;
 use Fabiom\UglyDuckling\Common\Database\QueryExecuter;
 use Fabiom\UglyDuckling\Common\Json\JsonTemplates\QueryBuilder;
 use Fabiom\UglyDuckling\Common\Loggers\EchoLogger;
@@ -20,7 +21,7 @@ use Fabiom\UglyDuckling\Common\Loggers\EchoLogger;
  */
 class Login extends Controller {
 	
-	const CONTROLLER_NAME = 'login';
+	const CONTROLLER_NAME = 'communitylogin';
 
     private /* UserDao */ $userDao;
     private /* UserCanLogIn */ $userCanLogIn;
@@ -90,14 +91,14 @@ class Login extends Controller {
 	        // redirecting to main page
 			// $this->redirectToPage( $this->router->makeRelativeUrl( Router::ROUTE_OFFICE_INBOX ) );
 			if ( $user->usr_defaultgroup == 'administrationgroup' ) {
-				$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( Router::ROUTE_ADMIN_DASHBOARD ) );
+				$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( AdminRouter::ROUTE_ADMIN_DASHBOARD ) );
 			} else {
-				$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( Router::ROUTE_OFFICE_ENTITY_DASHBOARD, 'res='.$groupresource->defaultaction ) );
+				$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( ResourceRouter::ROUTE_OFFICE_ENTITY_DASHBOARD, 'res='.$groupresource->defaultaction ) );
 			}
 			
 		} else {
 	        // redirecting to main page
-			$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( Router::ROUTE_COMMUNITY_LOGIN ) );
+			$this->redirectToPage( $this->applicationBuilder->getRouterContainer()->makeRelativeUrl( 'login' ) );
 		}
 	}
 	

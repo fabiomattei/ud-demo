@@ -1,6 +1,6 @@
 <?php
 
-namespace Fabiom\UDDemo\Custom\JsonTemplates;
+namespace Fabiom\UDDemo\JsonTemplates;
 
 use Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplateFactory;
 
