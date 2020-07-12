@@ -19,6 +19,8 @@ use Fabiom\UglyDuckling\Common\Loggers\EchoLogger;
  * the user to log in or not
  */
 class Login extends Controller {
+	
+	const CONTROLLER_NAME = 'login';
 
     private /* UserDao */ $userDao;
     private /* UserCanLogIn */ $userCanLogIn;

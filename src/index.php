@@ -45,7 +45,7 @@ $routersContainer->addRouter( new Fabiom\UglyDuckling\Common\Router\AdminRouter(
 $routersContainer->addRouter( new Fabiom\UDDemo\Controllers\CustomRouter( $setup->getBasePath() ) );
 $routersContainer->setDefaultController($defaultController);
 
-$controller = $routerContainer->getController( $request->getAction() );
+$controller = $routersContainer->getController( $request->getAction() );
 
 $jsonloader = new Fabiom\UglyDuckling\Common\Json\JsonLoader();
 $jsonloader->setIndexPath($setup->getJsonPath());

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fabiom\UDDemo\Custom\Controllers;
+namespace Fabiom\UDDemo\Controllers;
 
 use Fabiom\UglyDuckling\Common\Controllers\Controller;
 
