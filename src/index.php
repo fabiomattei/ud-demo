@@ -39,7 +39,7 @@ $request->setServerRequestURI( $severWrapper->getRequestURI() );
 
 $defaultController = new Fabiom\UDDemo\Controllers\Login;
 
-$routerContainer = new Fabiom\UglyDuckling\Common\Router\RoutersContainer( $setup->getBasePath() );
+$routersContainer = new Fabiom\UglyDuckling\Common\Router\RoutersContainer( $setup->getBasePath() );
 $routersContainer->addRouter( new Fabiom\UglyDuckling\Common\Router\ResourceRouter( $setup->getBasePath() ) );
 $routersContainer->addRouter( new Fabiom\UglyDuckling\Common\Router\AdminRouter( $setup->getBasePath() ) );
 $routersContainer->addRouter( new Fabiom\UDDemo\Controllers\CustomRouter( $setup->getBasePath() ) );
