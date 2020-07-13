@@ -38,15 +38,9 @@ class Login extends Controller {
     }
 	
 	public function getRequest() {
-		$error = '';
-		
-		if ( isset( $this->parameters[0] )  AND $this->parameters[0] != '' ) {
-			$error = 'error';
-		}
-		
 		$this->title            = $this->applicationBuilder->getSetup()->getAppNameForPageTitle() . ' :: Access page';
 		$this->menucontainer    = array( new PublicMenu( $this->applicationBuilder->getSetup()->getAppNameForPageTitle(), 'login' ) );
-		$this->centralcontainer = array( new LoginForm( $this->applicationBuilder->getSetup()->getAppNameForPageTitle(), $error ) );
+		$this->centralcontainer = array( new LoginForm( $this->applicationBuilder->getSetup()->getAppNameForPageTitle(), "" ) );
 		$this->templateFile     = 'login';
 	}
 	

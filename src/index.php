@@ -68,7 +68,7 @@ $applicationBuilder->setRouterContainer($routersContainer);
 $applicationBuilder->setSetup($setup);
 $applicationBuilder->setSecurityChecker(new Fabiom\UglyDuckling\Common\SecurityCheckers\PrivateSecurityChecker());
 $applicationBuilder->setDbconnection($dbconnection);
-$applicationBuilder->setRedirector(new Fabiom\UglyDuckling\Common\Redirectors\URLRedirector());
+$applicationBuilder->setRedirector(new Fabiom\UglyDuckling\Common\Redirectors\FakeRedirector());
 $applicationBuilder->setJsonloader($jsonloader);
 $applicationBuilder->setLogger(new Fabiom\UglyDuckling\Common\Loggers\EchoLogger());
 $applicationBuilder->setMessages($messagesBlock);
@@ -86,7 +86,8 @@ if ( $sessionWrapper->isUserLoggedIn() ) {
 } else {
 	// settings for user that has not logged in the system
 	// new Fabiom\UglyDuckling\Common\SecurityCheckers\PublicSecurityChecker(),
-	
+    $applicationBuilder->setSecurityChecker(new Fabiom\UglyDuckling\Common\SecurityCheckers\PublicSecurityChecker);
+
 	$controller->makeAllPresets(
         $applicationBuilder,
         $pageStatus
