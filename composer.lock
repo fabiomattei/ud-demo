@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "33948aaed5c9fe2ab6b9460048916a5d38e55945"
+                "reference": "886c03f3a12c5c49c18c1409ca2e2a18598eb67c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/33948aaed5c9fe2ab6b9460048916a5d38e55945",
-                "reference": "33948aaed5c9fe2ab6b9460048916a5d38e55945",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/886c03f3a12c5c49c18c1409ca2e2a18598eb67c",
+                "reference": "886c03f3a12c5c49c18c1409ca2e2a18598eb67c",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "software",
                 "template"
             ],
-            "time": "2020-07-13T08:45:41+00:00"
+            "time": "2020-07-14T07:34:12+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
