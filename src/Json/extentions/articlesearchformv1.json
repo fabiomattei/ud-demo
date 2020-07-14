@@ -1,0 +1,15 @@
+{
+  "name": "articlesearchformv1",
+  "metadata": { "type":"search", "version": "1" },
+  "allowedgroups": [ "author" ],
+  "get": {
+    "form": {
+      "title": "Serch between all requests",
+      "submitTitle": "Search",
+      "fields": [
+        { "type":"textarea", "validation":"max_len,2500", "name":"name", "label":"Name", "placeholder":"Name", "width":"12", "row":"1" },
+        { "type": "submitbutton", "width":"2", "row":"3", "name": "Save", "constantparameter": "Save" }
+      ]
+    }
+  }
+}

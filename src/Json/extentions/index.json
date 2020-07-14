@@ -6,7 +6,8 @@
     { "path":"./Json/extentions/articleinfov1.json", "type":"info", "name":"articleinfov1" },
     { "path":"./Json/extentions/articleschartv1.json", "type":"chartjs", "name":"articleschartv1" },
     { "path":"./Json/extentions/articlesdashboard.json", "type":"dashboard", "name":"articlesdashboard" },
-    { "path":"./Json/extentions/articlesearchv1.json", "type":"search", "name":"articlesearchv1" },
+    { "path":"./Json/extentions/articlesearchformv1.json", "type":"form", "name":"articlesearchformv1" },
+    { "path":"./Json/extentions/articlesearchresultstablev1.json", "type":"table", "name":"articlesearchresultstablev1" },
     { "path":"./Json/extentions/lastarticleinfov1.json", "type":"info", "name":"lastarticleinfov1" },
     { "path":"./Json/extentions/smallarticlestable.json", "type":"table", "name":"smallarticlestable" }
   ]

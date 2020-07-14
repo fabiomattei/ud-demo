@@ -1,0 +1,25 @@
+{
+  "name": "articlesearchresultstablev1",
+  "metadata": { "type":"table", "version": "1" },
+  "allowedgroups": [ "author" ],
+  "get": {
+    "query": {
+      "sql":"select id, title, description, created FROM articles WHERE title=:name;",
+      "parameters":[
+        { "placeholder": ":name", "postparameter": "name" }
+      ]
+    },
+    "table": {
+      "title": "My articles",
+      "fields": [
+        {"headline": "Title", "sqlfield": "title"},
+        {"headline": "Description", "sqlfield": "description"},
+        {"headline": "Date", "sqlfield": "created"}
+      ],
+      "actions": [
+        {"label": "Edit", "resource": "editarticleform", "parameters":[{"name": "id", "sqlfield": "id"}] },
+        {"label": "Delete", "resource": "deletearticletransaction", "parameters":[{"name": "id", "sqlfield": "id"}] }
+      ]
+    }
+  }
+}
