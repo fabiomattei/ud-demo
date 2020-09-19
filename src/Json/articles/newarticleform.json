@@ -29,6 +29,9 @@
           { "type":"long", "placeholder": ":description", "postparameter": "description" }
         ]
       }
-    ]
+    ],
+    "redirect": {
+      "action": { "resource": "articlestable" }
+    }
   }
 }

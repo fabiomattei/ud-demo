@@ -43,6 +43,9 @@
           { "type":"long", "placeholder": ":id", "postparameter": "id" }
         ]
       }
-    ]
+    ],
+    "redirect": {
+      "action": { "resource": "articlestable" }
+    }
   }
 }
