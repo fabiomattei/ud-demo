@@ -5,6 +5,8 @@
   "get": {
     "form": {
       "title": "My new article",
+      "action": { "resource":"newarticleform" },
+      "method": "POST",
       "fields": [
         { "type":"textfield", "name":"title", "label":"Title", "placeholder":"title", "width":"12", "row":"1" },
         { "type":"textarea", "name":"description", "label":"Description", "placeholder":"Description", "width":"12", "row":"2" },
