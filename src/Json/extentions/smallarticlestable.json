@@ -17,7 +17,7 @@
           {"headline": "Date", "sqlfield": "created"}
       ],
       "actions": [
-        {"label": "Info", "action": "entityinfo", "resource": "articleinfov1", "parameters":[{"name": "id", "sqlfield": "id"}] }
+        { "type":"button", "label": "Info", "action": "entityinfo", "resource": "articleinfov1", "parameters":[{"name": "id", "sqlfield": "id"}] }
       ]
     }
   }
