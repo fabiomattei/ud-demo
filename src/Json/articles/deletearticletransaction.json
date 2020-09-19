@@ -17,7 +17,7 @@
       }
     ],
     "redirect": {
-      "internal": { "type": "onepageback" }
+      "action": { "resource": "articlestable" }
     }
   }
 }
