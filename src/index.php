@@ -6,7 +6,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $severWrapper = new Fabiom\UglyDuckling\Common\Wrappers\ServerWrapper;
 $sessionWrapper = new Fabiom\UglyDuckling\Common\Wrappers\SessionWrapper;
-$linkBuilder = new Fabiom\UglyDuckling\Common\Json\JsonTemplates\LinkBuilder;
 $htmlTagsFactory = new Fabiom\UglyDuckling\Common\Tags\HTMLTagsFactory; 
 // you can use a custom class if needed: $htmlTagsFactory = new Fabiom\UDDemo\HTMLTags\CustomHTMLTagsFactory;
 $htmlTemplateLoader = new Fabiom\UglyDuckling\Common\Utils\HtmlTemplateLoader;
@@ -76,7 +75,6 @@ $applicationBuilder->setMessages($messagesBlock);
 $applicationBuilder->setHtmlTemplateLoader($htmlTemplateLoader);
 $applicationBuilder->setHtmlTagsFactory($htmlTagsFactory);
 $applicationBuilder->setJsonTemplateFactoriesContainer($jsonTemplateFactoriesContainer);
-$applicationBuilder->setLinkBuilder($linkBuilder);
 
 if ( $sessionWrapper->isUserLoggedIn() ) {
 	// settings for logged in user
