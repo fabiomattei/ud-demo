@@ -72,7 +72,6 @@ $applicationBuilder = new Fabiom\UglyDuckling\Common\Status\ApplicationBuilder;
 $applicationBuilder->setRouterContainer($routersContainer);
 $applicationBuilder->setSetup($setup);
 $applicationBuilder->setSecurityChecker(new Fabiom\UglyDuckling\Common\SecurityCheckers\PrivateSecurityChecker());
-$applicationBuilder->setDbconnection($dbconnection);
 $applicationBuilder->setRedirector(new Fabiom\UglyDuckling\Common\Redirectors\URLRedirector());
 $applicationBuilder->setJsonloader($jsonloader);
 $applicationBuilder->setLogger(new Fabiom\UglyDuckling\Common\Loggers\EchoLogger());
