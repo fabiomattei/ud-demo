@@ -7,11 +7,14 @@ use Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplateFactory;
 class CustomJsonTemplateFactory extends JsonTemplateFactory {
 
     /**
-     * PanelBuilder constructor.
-     * @param $tableBuilder
+     * CustomJsonTemplateFactory constructor.
+     * @param $jsonTemplateFactoriesContainer
+     * @param $applicationBuilder
+     * @param $pageStatus
      */
-    public function __construct() {
-        $this->jsonTemplateExample = new JsonTemplateExample;
+     public function __construct( $jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus ) {
+        parent::__construct();
+        $this->jsonTemplateExample = new JsonTemplateExample( $jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus );
     }
 
     /**

@@ -55,8 +55,6 @@ $jsonloader = new Fabiom\UglyDuckling\Common\Json\JsonLoader();
 $jsonloader->setIndexPath($setup->getJsonPath());
 
 $jsonTemplateFactoriesContainer = new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplateFactoriesContainer;
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory($jsonTemplateFactoriesContainer) );
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory($jsonTemplateFactoriesContainer) );
 
 $pageStatus = new Fabiom\UglyDuckling\Common\Status\PageStatus;
 $pageStatus->setRequest($request);
@@ -79,6 +77,9 @@ $applicationBuilder->setMessages($messagesBlock);
 $applicationBuilder->setHtmlTemplateLoader($htmlTemplateLoader);
 $applicationBuilder->setHtmlTagsFactory($htmlTagsFactory);
 $applicationBuilder->setJsonTemplateFactoriesContainer($jsonTemplateFactoriesContainer);
+
+$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory( $jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus ) );
+$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory($jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus) );
 
 if ( $sessionWrapper->isUserLoggedIn() ) {
 	// settings for logged in user
