@@ -13,7 +13,7 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
      * @param $pageStatus
      */
      public function __construct( $applicationBuilder, $pageStatus ) {
-        parent::__construct();
+        parent::__construct( $applicationBuilder, $pageStatus );
         $this->jsonTemplateExample = new JsonTemplateExample( $applicationBuilder, $pageStatus );
     }
 

@@ -54,7 +54,7 @@ class Login extends Controller {
     );
 	
 	public function postRequest() {
-		$this->userDao->setDBH( $this->applicationBuilder->getDbconnection()->getDBH() );
+		$this->userDao->setDBH( $this->pageStatus->getDbconnection()->getDBH() );
 		$this->userCanLogIn->setUserDao( $this->userDao );
 		$this->userCanLogIn->setParameters( $this->postParameters );
 		$this->userCanLogIn->performAction();
@@ -72,9 +72,7 @@ class Login extends Controller {
 			if ( $this->applicationBuilder->getSetup()->isSessionSetupPathSet() ) {
                  SessionJsonSetup::loadSessionVariables(
                      $this->applicationBuilder->getSetup()->getSessionSetupPath(),
-                     $this->queryBuilder,
                      $this->queryExecuter,
-                     $this->applicationBuilder->getDbconnection(),
                      $this->pageStatus->getSessionWrapper()
                  );
 			}
