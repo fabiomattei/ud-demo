@@ -47,7 +47,8 @@
     "redirect": {
       "action": { "resource": "articlestable" }
     },
-	"validationerrorform": {
+	"validationerror": {
+	  "form": {
         "title": "Edit article",
         "action": { "resource":"editarticleform" },
         "method": "POST",
@@ -57,6 +58,7 @@
           { "type":"hidden", "name":"id", "postparameter":"id", "row":"3" },
           { "type": "submitbutton", "width":"2", "row":"3", "name": "Save", "constantparameter": "Save" }
         ]
+	  }
 	}
   }
 }
