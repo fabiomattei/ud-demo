@@ -78,8 +78,8 @@ $applicationBuilder->setHtmlTemplateLoader($htmlTemplateLoader);
 $applicationBuilder->setHtmlTagsFactory($htmlTagsFactory);
 $applicationBuilder->setJsonTemplateFactoriesContainer($jsonTemplateFactoriesContainer);
 
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory( $jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus ) );
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory($jsonTemplateFactoriesContainer, $applicationBuilder, $pageStatus) );
+$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory( $applicationBuilder, $pageStatus ) );
+$jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory( $applicationBuilder, $pageStatus) );
 
 if ( $sessionWrapper->isUserLoggedIn() ) {
 	// settings for logged in user
