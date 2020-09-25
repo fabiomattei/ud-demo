@@ -25,16 +25,11 @@ class Login extends Controller {
 
     private /* UserDao */ $userDao;
     private /* UserCanLogIn */ $userCanLogIn;
-    private /* QueryExecuter */ $queryExecuter;
-    private /* QueryBuilder */ $queryBuilder;
 	
     function __construct() {
         $this->logger = new EchoLogger;
 		$this->userDao = new UserDao;
 		$this->userCanLogIn = new UserCanLogIn;
-		$this->queryExecuter = new QueryExecuter;
-        $this->queryExecuter->setLogger($this->logger);
-		$this->queryBuilder = new QueryBuilder;
     }
 	
 	public function getRequest() {
@@ -72,7 +67,7 @@ class Login extends Controller {
 			if ( $this->applicationBuilder->getSetup()->isSessionSetupPathSet() ) {
                  SessionJsonSetup::loadSessionVariables(
                      $this->applicationBuilder->getSetup()->getSessionSetupPath(),
-                     $this->queryExecuter,
+                     $this->pageStatus->getQueryExecutor(),
                      $this->pageStatus->getSessionWrapper()
                  );
 			}
