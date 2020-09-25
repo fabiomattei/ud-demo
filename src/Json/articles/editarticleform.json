@@ -46,6 +46,17 @@
     ],
     "redirect": {
       "action": { "resource": "articlestable" }
-    }
+    },
+	"validationerrorform": {
+        "title": "Edit article",
+        "action": { "resource":"editarticleform" },
+        "method": "POST",
+        "fields": [
+          { "type":"textfield", "name":"title", "label":"Title", "placeholder":"title", "postparameter":"title", "width":"12", "row":"1" },
+          { "type":"textarea", "name":"description", "label":"Description", "placeholder":"Description", "postparameter":"description", "width":"12", "row":"2" },
+          { "type":"hidden", "name":"id", "postparameter":"id", "row":"3" },
+          { "type": "submitbutton", "width":"2", "row":"3", "name": "Save", "constantparameter": "Save" }
+        ]
+	}
   }
 }
