@@ -36,7 +36,6 @@ $dbconnection->setLogger(new Fabiom\UglyDuckling\Common\Loggers\EchoLogger());
 
 $queryExecutor = new \Fabiom\UglyDuckling\Common\Database\QueryExecuter();
 $queryExecutor->setDBH( $dbconnection->getDBH() );
-$queryExecutor->setLogger(new Fabiom\UglyDuckling\Common\Loggers\EchoLogger());
 
 $request = new Fabiom\UglyDuckling\Common\Request\Request();
 $request->setServerRequestURI( $severWrapper->getRequestURI() );
@@ -77,6 +76,9 @@ $applicationBuilder->setMessages($messagesBlock);
 $applicationBuilder->setHtmlTemplateLoader($htmlTemplateLoader);
 $applicationBuilder->setHtmlTagsFactory($htmlTagsFactory);
 $applicationBuilder->setJsonTemplateFactoriesContainer($jsonTemplateFactoriesContainer);
+
+$queryExecutor->setPageStatus( $pageStatus );
+$queryExecutor->setApplicationBuilder( $applicationBuilder );
 
 $jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory( $applicationBuilder, $pageStatus ) );
 $jsonTemplateFactoriesContainer->addJsonTemplateFactory( new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory( $applicationBuilder, $pageStatus) );
