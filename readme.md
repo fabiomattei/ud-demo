@@ -4,18 +4,23 @@
 
 Before we start you need to be sure you have **composer** and **docker** properly installed on your system. Ulgy Duckling requires **PHP 7.3 or newer** installed on your system but if that is not the case we can take advantage of docker in order to solve the issue.
 
-A quick way to start is to clone the demo project from <a href="https://github.com/fabiomattei/ud-demo">the github project repository</a> 
+Clone the demo project from this repository
 
 > git clone https://github.com/fabiomattei/ud-demo
 
 Now you can type:
 
 > cd ud-demo
+
 > composer update
+
 > docker-compose build
+
 > docker-compose up -d
 
 You will have a working installation of UD.
+
+### Using Docker in order to update the composer dependencies
 
 If you do not have PHP 7.3 or 7.4 installed on your system you can just *use docker to run composer*. 
 Instead of writing *composer update* you are going to type:
@@ -23,12 +28,6 @@ Instead of writing *composer update* you are going to type:
 > sudo docker run --rm --interactive --tty --volume $PWD:/app composer update
 
 This command is going to run composer using a docker container.
-
-### Using Docker in order to update the composer dependencies 
-
-If composer is not installed in your system it is possible to use docker in order to run composer commands.
-
-> sudo docker run --rm --interactive --tty   --volume $PWD:/app   composer update
 
 ### Setting up the database
 
