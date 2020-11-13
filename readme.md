@@ -1,4 +1,4 @@
-# Demo app for ugly duckling
+# Demo app for Ugly Duckling
 
 ### Download and startup
 
@@ -6,37 +6,29 @@ Before we start you need to be sure you have **composer** and **docker** properl
 
 A quick way to start is to clone the demo project from <a href="https://github.com/fabiomattei/ud-demo">the github project repository</a> 
 
-
-{% highlight shell %}
-git clone https://github.com/fabiomattei/ud-demo
-{% endhighlight %}
+> git clone https://github.com/fabiomattei/ud-demo
 
 Now you can type:
 
-{% highlight shell %}
-cd ud-demo
-composer update
-docker-compose build
-docker-compose up -d
-{% endhighlight %}
+> cd ud-demo
+> composer update
+> docker-compose build
+> docker-compose up -d
 
 You will have a working installation of UD.
 
 If you do not have PHP 7.3 or 7.4 installed on your system you can just *use docker to run composer*. 
 Instead of writing *composer update* you are going to type:
 
-{% highlight shell %}
-sudo docker run --rm --interactive --tty --volume $PWD:/app composer update
-{% endhighlight %}
+> sudo docker run --rm --interactive --tty --volume $PWD:/app composer update
+
 This command is going to run composer using a docker container.
 
 ### Using Docker in order to update the composer dependencies 
 
 If composer is not installed in your system it is possible to use docker in order to run composer commands.
 
-{% highlight shell %}
-sudo docker run --rm --interactive --tty   --volume $PWD:/app   composer update
-{% endhighlight %}
+> sudo docker run --rm --interactive --tty   --volume $PWD:/app   composer update
 
 ### Setting up the database
 
