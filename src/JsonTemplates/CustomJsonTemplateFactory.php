@@ -19,7 +19,7 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
     
     public function isResourceSupported( $resource ) {
         return in_array($resource->metadata->type, array(
-            JsonTemplateDJTable::blocktype
+            JsonTemplateExample::blocktype
         ));
     }
 
