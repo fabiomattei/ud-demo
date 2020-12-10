@@ -16,6 +16,12 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
         parent::__construct( $applicationBuilder, $pageStatus );
         $this->jsonTemplateExample = new JsonTemplateExample( $applicationBuilder, $pageStatus );
     }
+    
+    public function isResourceSupported( $resource ) {
+        return in_array($resource->metadata->type, array(
+            JsonTemplateDJTable::blocktype
+        ));
+    }
 
     /**
      * Return an HTML Block
@@ -29,12 +35,6 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
 
         if ($resource->metadata->type == JsonTemplateExample::blocktype) {
             $this->jsonTemplateExample->setResource($resource);
-			$this->jsonTemplateExample->setSessionWrapper($this->sessionWrapper);
-            $this->jsonTemplateExample->setHtmlTemplateLoader($this->htmlTemplateLoader);
-            $this->jsonTemplateExample->setJsonloader($this->jsonloader);
-            $this->jsonTemplateExample->setRouter($this->router);
-            $this->jsonTemplateExample->setParameters($this->parameters);
-            $this->jsonTemplateExample->setDbconnection($this->dbconnection);
             return $this->jsonTemplateExample->createHTMLBlock();
         }
 
