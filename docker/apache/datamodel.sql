@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Creato il: Ott 12, 2019 alle 19:59
--- Versione del server: 10.4.3-MariaDB-1:10.4.3+maria~bionic
--- Versione PHP: 7.2.13
+-- Creato il: Dic 14, 2020 alle 19:07
+-- Versione del server: 10.4.10-MariaDB-1:10.4.10+maria~bionic
+-- Versione PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,6 +50,33 @@ INSERT INTO `articles` (`id`, `title`, `description`, `updated`, `created`) VALU
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `blockedip`
+--
+
+CREATE TABLE `blockedip` (
+  `ip_id` int(10) UNSIGNED NOT NULL,
+  `ip_ipaddress` varchar(20) COLLATE utf8_bin NOT NULL,
+  `ip_failed_attepts` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `ip_time_to_remove` datetime NOT NULL,
+  `ip_updated` datetime NOT NULL,
+  `ip_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `deactivateduser`
+--
+
+CREATE TABLE `deactivateduser` (
+  `du_id` int(10) UNSIGNED NOT NULL,
+  `du_username` varchar(255) COLLATE utf8_bin NOT NULL,
+  `du_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `requests`
 --
 
@@ -68,6 +95,21 @@ INSERT INTO `requests` (`id`, `name`, `amount`, `duedate`) VALUES
 (1, 'Fabio', '13.45', '2019-10-02'),
 (2, 'John', '12.54', '2019-10-02'),
 (3, 'Hellen', '10.00', '2019-10-02');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `securitylog`
+--
+
+CREATE TABLE `securitylog` (
+  `sl_id` int(10) UNSIGNED NOT NULL,
+  `sl_ipaddress` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `sl_username` varchar(255) COLLATE utf8_bin NOT NULL,
+  `sl_password` varchar(255) COLLATE utf8_bin NOT NULL,
+  `sl_description` varchar(255) COLLATE utf8_bin NOT NULL,
+  `sl_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -93,7 +135,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `usr_email`, `usr_hashedpsw`, `usr_password_updated`, `usr_updated`, `usr_created`) VALUES
 (1, 'administrationgroup', 'Admin', '', 'admin', '$2y$10$gUWxjdAJRE.KyWqEZh4w1.kRDAumgVamek.BBq.Li2CMkK7GGeeV2', '2018-10-28 10:04:49', '2018-10-21 10:13:39', '2018-10-21 00:00:00'),
-(2, 'author', 'Manager', '', 'manager', '$2y$10$YmsVMDQrYjnEdbkqfB5pNuLzyeMQep0C/ahaRWQSs/AN63/U5SXTW', '2018-08-07 00:00:00', '2018-08-07 00:00:00', '2018-08-07 00:00:00');
+(2, 'analistgroup', 'Analist', '', 'analist', '$2y$10$Fr7NkaCszrhPiU6trsRQTu2G5pmtU6sSpgD7YlBUChjBnEHFam1/i', '2020-12-10 17:59:14', '2018-08-07 00:00:00', '2018-08-07 00:00:00'),
+(3, 'representativegroup', 'Representative', '', 'representative', '$2y$10$ZdUZPp.6GeEvYp4RcnxtUOm5zLMVBgJoFgJA4vweXv5YWYoki6Eta', '2020-12-10 17:59:25', '2020-12-10 18:13:50', '2020-12-10 18:13:50');
 
 -- --------------------------------------------------------
 
@@ -110,6 +153,14 @@ CREATE TABLE `usergroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- Dump dei dati per la tabella `usergroup`
+--
+
+INSERT INTO `usergroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
+(1, 'administrationgroup', 1, '2020-12-10 18:11:38', '2020-12-10 18:11:38'),
+(2, 'authorgroup', 2, '2020-12-10 18:11:54', '2020-12-10 18:11:54');
+
+--
 -- Indici per le tabelle scaricate
 --
 
@@ -120,10 +171,28 @@ ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indici per le tabelle `blockedip`
+--
+ALTER TABLE `blockedip`
+  ADD PRIMARY KEY (`ip_id`);
+
+--
+-- Indici per le tabelle `deactivateduser`
+--
+ALTER TABLE `deactivateduser`
+  ADD PRIMARY KEY (`du_id`);
+
+--
 -- Indici per le tabelle `requests`
 --
 ALTER TABLE `requests`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `securitylog`
+--
+ALTER TABLE `securitylog`
+  ADD PRIMARY KEY (`sl_id`);
 
 --
 -- Indici per le tabelle `user`
@@ -148,22 +217,40 @@ ALTER TABLE `articles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT per la tabella `blockedip`
+--
+ALTER TABLE `blockedip`
+  MODIFY `ip_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `deactivateduser`
+--
+ALTER TABLE `deactivateduser`
+  MODIFY `du_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `requests`
 --
 ALTER TABLE `requests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT per la tabella `securitylog`
+--
+ALTER TABLE `securitylog`
+  MODIFY `sl_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `usr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `usr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `usergroup`
 --
 ALTER TABLE `usergroup`
-  MODIFY `ug_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ug_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
