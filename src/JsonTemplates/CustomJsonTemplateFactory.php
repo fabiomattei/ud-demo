@@ -31,7 +31,7 @@ class CustomJsonTemplateFactory extends JsonTemplateFactory {
      * @param $resource json strcture
      * @param CardHTMLBlock $panelBlock
      */
-    public function getHTMLBlock( $resource ): JsonTemplate {
+    public function getHTMLBlock( $resource ) {
 
         if ($resource->metadata->type == JsonTemplateExample::blocktype) {
             $this->jsonTemplateExample->setResource($resource);
