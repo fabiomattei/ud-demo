@@ -11,8 +11,8 @@
       "parameters":[]
     },
     "chartdataglue":[
-      { "type":"array", "placeholder":"#labels", "sqlfield":"created" },
-      { "type":"array", "placeholder":"#amounts", "sqlfield":"counted" }
+      { "type":"string", "placeholder":"#labels", "sqlfield":"created" },
+      { "type":"long", "placeholder":"#amounts", "sqlfield":"counted" }
     ],
     "chart": {
       "type":"bar",
