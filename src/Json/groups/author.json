@@ -22,6 +22,7 @@
     {
       "label":"User",
       "submenu": [
+        { "label":"Change group", "resource":"change_group" },
         { "label":"Logout", "controller":"logout" }
       ]
     }

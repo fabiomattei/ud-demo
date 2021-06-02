@@ -4,6 +4,7 @@
   "scripts": [
     { "path":"./Json/groups/author.json", "type":"group", "name":"author" },
     { "path":"./Json/groups/administrationgroup.json", "type":"group", "name":"administrationgroup" },
+    { "path":"./Json/groups/change_group.json", "type":"form", "name":"change_group" },
     { "path":"./Json/articles/articlestable.json", "type":"table", "name":"articlestable" },
     { "path":"./Json/reportstable.json", "type":"table", "name":"reportstable" },
     { "path":"./Json/articles/newarticleform.json", "type":"form", "name":"newarticleform" },

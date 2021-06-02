@@ -1,0 +1,42 @@
+{
+  "name": "change_group",
+  "metadata": { "type":"form", "version": "1" },
+  "allowedgroups": [ "author" ],
+  "get": {
+    "request": {
+      "parameters": []
+    },
+    "form": {
+      "title": "Switch to group",
+      "action": { "resource":"change_group" },
+      "method": "POST",
+      "fields": [
+        { "type":"sqldropdown", "name":"newgroup", "label":"New group", "session":"user_id", "width":"6", "row":"1",
+          "query": {
+            "sql": "SELECT ug_id, ug_groupslug FROM usergroup WHERE ug_userid = :usrid;",
+            "parameters":[
+              { "type":"long", "placeholder": ":usrid", "sessionparameter": "user_id" }
+            ],
+            "debug": "on"
+          },
+          "valuesqlfield": "ug_id",
+          "labelsqlfield": "ug_groupslug"
+        },
+        { "type": "submitbutton", "width":"2", "row":"2", "name": "Change group", "constantparameter": "Change group" }
+      ]
+    }
+  },
+  "post": {
+    "request": {
+      "postparameters": [
+        { "name":"newgroup", "validation":"required|integer" }
+      ]
+    },
+    "sessionupdates": [
+      { "type":"string", "sessionparameter":"usr_type", "getparameter":"usr_defaultgroup" }
+    ],
+    "redirect": {
+      "action": { "resource": "change_group" }
+    }
+  }
+}
