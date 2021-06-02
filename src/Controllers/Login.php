@@ -10,8 +10,6 @@ use Fabiom\UglyDuckling\Templates\Blocks\Menus\PublicMenu;
 use Fabiom\UglyDuckling\Templates\Blocks\Login\LoginForm;
 use Fabiom\UglyDuckling\BusinessLogic\User\Daos\UserDao;
 use Fabiom\UglyDuckling\BusinessLogic\User\UseCases\UserCanLogIn;
-use Fabiom\UglyDuckling\Common\Database\QueryExecuter;
-use Fabiom\UglyDuckling\Common\Json\JsonTemplates\QueryBuilder;
 use Fabiom\UglyDuckling\Common\Loggers\EchoLogger;
 
 /**
@@ -27,7 +25,6 @@ class Login extends Controller {
     private /* UserCanLogIn */ $userCanLogIn;
 	
     function __construct() {
-        $this->logger = new EchoLogger;
 		$this->userDao = new UserDao;
 		$this->userCanLogIn = new UserCanLogIn;
     }
@@ -50,6 +47,7 @@ class Login extends Controller {
 	
 	public function postRequest() {
 		$this->userDao->setDBH( $this->pageStatus->getDbconnection()->getDBH() );
+        $this->userDao->setLogger( $this->applicationBuilder->getLogger() );
 		$this->userCanLogIn->setUserDao( $this->userDao );
 		$this->userCanLogIn->setParameters( $this->postParameters );
 		$this->userCanLogIn->performAction();

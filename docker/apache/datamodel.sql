@@ -134,7 +134,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `usr_email`, `usr_hashedpsw`, `usr_password_updated`, `usr_updated`, `usr_created`) VALUES
-(1, 'administration', 'Admin', '', 'admin', '$2y$10$gUWxjdAJRE.KyWqEZh4w1.kRDAumgVamek.BBq.Li2CMkK7GGeeV2', '2018-10-28 10:04:49', '2018-10-21 10:13:39', '2018-10-21 00:00:00'),
+(1, 'administrationgroup', 'Admin', '', 'admin', '$2y$10$gUWxjdAJRE.KyWqEZh4w1.kRDAumgVamek.BBq.Li2CMkK7GGeeV2', '2018-10-28 10:04:49', '2018-10-21 10:13:39', '2018-10-21 00:00:00'),
 (2, 'author', 'Author', '', 'author', '$2y$10$z9DHuhUuVjbwsRtwrwMVQOlE5k6ZCD6Dt5PmfA03wL75Geo14wLKm', '2020-12-27 08:15:28', '2018-08-07 00:00:00', '2018-08-07 00:00:00');
 
 -- --------------------------------------------------------
@@ -156,7 +156,7 @@ CREATE TABLE `usergroup` (
 --
 
 INSERT INTO `usergroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
-(1, 'administration', 1, '2020-12-10 18:11:38', '2020-12-10 18:11:38'),
+(1, 'administrationgroup', 1, '2020-12-10 18:11:38', '2020-12-10 18:11:38'),
 (2, 'author', 2, '2020-12-10 18:11:54', '2020-12-10 18:11:54');
 
 --

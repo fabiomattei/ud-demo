@@ -3,7 +3,7 @@
   "metadata": { "type":"index", "version": "1" },
   "scripts": [
     { "path":"./Json/groups/author.json", "type":"group", "name":"author" },
-    { "path":"./Json/groups/administration.json", "type":"group", "name":"administration" },
+    { "path":"./Json/groups/administrationgroup.json", "type":"group", "name":"administrationgroup" },
     { "path":"./Json/articles/articlestable.json", "type":"table", "name":"articlestable" },
     { "path":"./Json/reportstable.json", "type":"table", "name":"reportstable" },
     { "path":"./Json/articles/newarticleform.json", "type":"form", "name":"newarticleform" },

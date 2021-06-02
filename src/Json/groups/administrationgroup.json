@@ -1,9 +1,8 @@
 {
-  "name": "administration",
+  "name": "administrationgroup",
   "metadata": { "type":"group", "version": "1" },
   "home": { "label":"My app", "action":"#" },
   "defaultaction": "articlestable",
-  "home": { "label":"My app" },
   "menu": [
     { "label":"Home", "resource":"articlesdashboard" },
     {
