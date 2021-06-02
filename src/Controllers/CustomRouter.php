@@ -19,6 +19,7 @@ class CustomRouter extends RouterBase {
         switch ( $action ) {
             case CustomControllerExample::CONTROLLER_NAME: $controller = new CustomControllerExample; break;
 			case Login::CONTROLLER_NAME: $controller = new Login; break;
+            case Logout::CONTROLLER_NAME: $controller = new Logout; break;
         }
         return $controller;
     }

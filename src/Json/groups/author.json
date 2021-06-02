@@ -14,9 +14,15 @@
       ]
     },
     {
-      "label":"Extetions",
+      "label":"Extentions",
       "submenu": [
             { "label":"Dashboard", "resource":"articlesdashboard" }
+      ]
+    },
+    {
+      "label":"User",
+      "submenu": [
+        { "label":"Logout", "controller":"logout" }
       ]
     }
   ]

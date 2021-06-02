@@ -10,7 +10,6 @@ use Fabiom\UglyDuckling\Templates\Blocks\Menus\PublicMenu;
 use Fabiom\UglyDuckling\Templates\Blocks\Login\LoginForm;
 use Fabiom\UglyDuckling\BusinessLogic\User\Daos\UserDao;
 use Fabiom\UglyDuckling\BusinessLogic\User\UseCases\UserCanLogIn;
-use Fabiom\UglyDuckling\Common\Loggers\EchoLogger;
 
 /**
  * This class cares about the login process.
