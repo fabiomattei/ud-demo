@@ -13,7 +13,7 @@
       "fields": [
         { "type":"sqldropdown", "name":"newgroup", "label":"New group", "session":"user_id", "width":"6", "row":"1",
           "query": {
-            "sql": "SELECT ug_id, ug_groupslug FROM usergroup WHERE ug_userid = :usrid;",
+            "sql": "SELECT ug_id, ug_groupslug FROM ud_usergroup WHERE ug_userid = :usrid;",
             "parameters":[
               { "type":"long", "placeholder": ":usrid", "sessionparameter": "user_id" }
             ],

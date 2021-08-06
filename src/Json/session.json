@@ -4,7 +4,7 @@
   "queryset": [
     {
       "label": "query1",
-      "sql": "SELECT usr_defaultgroup FROM user where usr_id = :usrid ;",
+      "sql": "SELECT usr_defaultgroup FROM ud_users where usr_id = :usrid ;",
       "parameters":[
         { "type":"long", "placeholder": ":usrid", "sessionparameter": "user_id" }
       ]
