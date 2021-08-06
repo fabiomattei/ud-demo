@@ -50,10 +50,10 @@ INSERT INTO `articles` (`id`, `title`, `description`, `updated`, `created`) VALU
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `blockedip`
+-- Struttura della tabella `ud_blockedip`
 --
 
-CREATE TABLE `blockedip` (
+CREATE TABLE `ud_blockedip` (
                              `ip_id` int(10) UNSIGNED NOT NULL,
                              `ip_ipaddress` varchar(20) COLLATE utf8_bin NOT NULL,
                              `ip_failed_attepts` int(10) UNSIGNED NOT NULL DEFAULT 0,
@@ -65,10 +65,10 @@ CREATE TABLE `blockedip` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `deactivateduser`
+-- Struttura della tabella `ud_deactivateduser`
 --
 
-CREATE TABLE `deactivateduser` (
+CREATE TABLE `ud_deactivateduser` (
                                    `du_id` int(10) UNSIGNED NOT NULL,
                                    `du_username` varchar(255) COLLATE utf8_bin NOT NULL,
                                    `du_created` datetime NOT NULL
@@ -99,10 +99,10 @@ INSERT INTO `requests` (`id`, `name`, `amount`, `duedate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `securitylog`
+-- Struttura della tabella `ud_ud_securitylog`
 --
 
-CREATE TABLE `securitylog` (
+CREATE TABLE `ud_securitylog` (
                                `sl_id` int(10) UNSIGNED NOT NULL,
                                `sl_ipaddress` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '',
                                `sl_username` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -114,10 +114,10 @@ CREATE TABLE `securitylog` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `user`
+-- Struttura della tabella `ud_users`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `ud_users` (
                         `usr_id` bigint(20) NOT NULL,
                         `usr_defaultgroup` varchar(80) CHARACTER SET utf8 NOT NULL DEFAULT '',
                         `usr_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -130,20 +130,20 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dump dei dati per la tabella `user`
+-- Dump dei dati per la tabella `ud_users`
 --
 
-INSERT INTO `user` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `usr_email`, `usr_hashedpsw`, `usr_password_updated`, `usr_updated`, `usr_created`) VALUES
+INSERT INTO `ud_users` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`, `usr_email`, `usr_hashedpsw`, `usr_password_updated`, `usr_updated`, `usr_created`) VALUES
 (1, 'administrationgroup', 'Admin', '', 'admin', '$2y$10$gUWxjdAJRE.KyWqEZh4w1.kRDAumgVamek.BBq.Li2CMkK7GGeeV2', '2018-10-28 10:04:49', '2018-10-21 10:13:39', '2018-10-21 00:00:00'),
 (2, 'author', 'Author', '', 'author', '$2y$10$z9DHuhUuVjbwsRtwrwMVQOlE5k6ZCD6Dt5PmfA03wL75Geo14wLKm', '2020-12-27 08:15:28', '2018-08-07 00:00:00', '2018-08-07 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `usergroup`
+-- Struttura della tabella `ud_usersgroup`
 --
 
-CREATE TABLE `usergroup` (
+CREATE TABLE `ud_usersgroup` (
                              `ug_id` int(10) UNSIGNED NOT NULL,
                              `ug_groupslug` varchar(80) COLLATE utf8_bin NOT NULL DEFAULT '',
                              `ug_userid` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -152,10 +152,10 @@ CREATE TABLE `usergroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dump dei dati per la tabella `usergroup`
+-- Dump dei dati per la tabella `ud_usersgroup`
 --
 
-INSERT INTO `usergroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
+INSERT INTO `ud_usersgroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
 (1, 'administrationgroup', 1, '2020-12-10 18:11:38', '2020-12-10 18:11:38'),
 (2, 'author', 2, '2020-12-10 18:11:54', '2020-12-10 18:11:54');
 
@@ -170,15 +170,15 @@ ALTER TABLE `articles`
     ADD PRIMARY KEY (`id`);
 
 --
--- Indici per le tabelle `blockedip`
+-- Indici per le tabelle `ud_blockedip`
 --
-ALTER TABLE `blockedip`
+ALTER TABLE `ud_blockedip`
     ADD PRIMARY KEY (`ip_id`);
 
 --
--- Indici per le tabelle `deactivateduser`
+-- Indici per le tabelle `ud_deactivateduser`
 --
-ALTER TABLE `deactivateduser`
+ALTER TABLE `ud_deactivateduser`
     ADD PRIMARY KEY (`du_id`);
 
 --
@@ -188,21 +188,21 @@ ALTER TABLE `requests`
     ADD PRIMARY KEY (`id`);
 
 --
--- Indici per le tabelle `securitylog`
+-- Indici per le tabelle `ud_securitylog`
 --
-ALTER TABLE `securitylog`
+ALTER TABLE `ud_securitylog`
     ADD PRIMARY KEY (`sl_id`);
 
 --
--- Indici per le tabelle `user`
+-- Indici per le tabelle `ud_users`
 --
-ALTER TABLE `user`
+ALTER TABLE `ud_users`
     ADD PRIMARY KEY (`usr_id`);
 
 --
--- Indici per le tabelle `usergroup`
+-- Indici per le tabelle `ud_usersgroup`
 --
-ALTER TABLE `usergroup`
+ALTER TABLE `ud_usersgroup`
     ADD PRIMARY KEY (`ug_id`);
 
 --
@@ -216,15 +216,15 @@ ALTER TABLE `articles`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT per la tabella `blockedip`
+-- AUTO_INCREMENT per la tabella `ud_blockedip`
 --
-ALTER TABLE `blockedip`
+ALTER TABLE `ud_blockedip`
     MODIFY `ip_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la tabella `deactivateduser`
+-- AUTO_INCREMENT per la tabella `ud_deactivateduser`
 --
-ALTER TABLE `deactivateduser`
+ALTER TABLE `ud_deactivateduser`
     MODIFY `du_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -234,21 +234,21 @@ ALTER TABLE `requests`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT per la tabella `securitylog`
+-- AUTO_INCREMENT per la tabella `ud_securitylog`
 --
-ALTER TABLE `securitylog`
+ALTER TABLE `ud_securitylog`
     MODIFY `sl_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la tabella `user`
+-- AUTO_INCREMENT per la tabella `ud_users`
 --
-ALTER TABLE `user`
+ALTER TABLE `ud_users`
     MODIFY `usr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT per la tabella `usergroup`
+-- AUTO_INCREMENT per la tabella `ud_usersgroup`
 --
-ALTER TABLE `usergroup`
+ALTER TABLE `ud_usersgroup`
     MODIFY `ug_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
