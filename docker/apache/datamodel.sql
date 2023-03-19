@@ -140,10 +140,10 @@ INSERT INTO `ud_users` (`usr_id`, `usr_defaultgroup`, `usr_name`, `usr_surname`,
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `ud_usersgroup`
+-- Struttura della tabella `ud_usergroup`
 --
 
-CREATE TABLE `ud_usersgroup` (
+CREATE TABLE `ud_usergroup` (
                              `ug_id` int(10) UNSIGNED NOT NULL,
                              `ug_groupslug` varchar(80) COLLATE utf8_bin NOT NULL DEFAULT '',
                              `ug_userid` int(11) UNSIGNED NOT NULL DEFAULT 0,
@@ -152,10 +152,10 @@ CREATE TABLE `ud_usersgroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dump dei dati per la tabella `ud_usersgroup`
+-- Dump dei dati per la tabella `ud_usergroup`
 --
 
-INSERT INTO `ud_usersgroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
+INSERT INTO `ud_usergroup` (`ug_id`, `ug_groupslug`, `ug_userid`, `ug_updated`, `ug_created`) VALUES
 (1, 'administrationgroup', 1, '2020-12-10 18:11:38', '2020-12-10 18:11:38'),
 (2, 'author', 2, '2020-12-10 18:11:54', '2020-12-10 18:11:54');
 
@@ -200,9 +200,9 @@ ALTER TABLE `ud_users`
     ADD PRIMARY KEY (`usr_id`);
 
 --
--- Indici per le tabelle `ud_usersgroup`
+-- Indici per le tabelle `ud_usergroup`
 --
-ALTER TABLE `ud_usersgroup`
+ALTER TABLE `ud_usergroup`
     ADD PRIMARY KEY (`ug_id`);
 
 --
@@ -246,9 +246,9 @@ ALTER TABLE `ud_users`
     MODIFY `usr_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT per la tabella `ud_usersgroup`
+-- AUTO_INCREMENT per la tabella `ud_usergroup`
 --
-ALTER TABLE `ud_usersgroup`
+ALTER TABLE `ud_usergroup`
     MODIFY `ug_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
