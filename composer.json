@@ -16,7 +16,7 @@
             "ext-gd": "2"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "fabiomattei/uglyduckling": "dev-master"
     },
