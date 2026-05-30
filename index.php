@@ -18,7 +18,8 @@ $sessionWrapper = new Fabiom\UglyDuckling\Common\Wrappers\SessionWrapper;
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $sessionWrapper->createCsrfToken();
 }
-$htmlTagsFactory = new Fabiom\UglyDuckling\Common\Tags\HTMLTagsFactory;
+
+$htmlTagsFactory    = new Fabiom\UglyDuckling\Common\Tags\HTMLTagsFactory;
 $htmlTemplateLoader = new Fabiom\UglyDuckling\Common\Utils\HtmlTemplateLoader;
 $htmlTemplateLoader->setPath('vendor/fabiomattei/uglyduckling/src/Templates/HTML/');
 
@@ -38,10 +39,7 @@ $setup->setHTMLTemplatePath('vendor/fabiomattei/uglyduckling/src/Templates/');
 $setup->setSessionSetupPath('src/Json/session.json');
 
 $dbconnection = new Fabiom\UglyDuckling\Common\Database\DBConnection(
-    getenv('DB_HOST'),
-    getenv('DB_NAME'),
-    getenv('DB_USER'),
-    getenv('DB_PASSWORD')
+    getenv('DB_HOST'), getenv('DB_NAME'), getenv('DB_USER'), getenv('DB_PASSWORD')
 );
 $dbconnection->setLogger(new Fabiom\UglyDuckling\Common\Loggers\EchoLogger());
 
@@ -51,14 +49,8 @@ $queryExecutor->setDBH($dbconnection->getDBH());
 $request = new Fabiom\UglyDuckling\Common\Request\Request();
 $request->setServerRequestURI($severWrapper->getRequestURI());
 
-$defaultController = new Fabiom\UDDemo\Controllers\Login;
-
 $routersContainer = new Fabiom\UglyDuckling\Common\Router\RoutersContainer($setup->getBasePath());
-$routersContainer->addRouter(new Fabiom\UglyDuckling\Common\Router\ResourceRouter($setup->getBasePath()));
-$routersContainer->addRouter(new Fabiom\UglyDuckling\Common\Router\AdminRouter($setup->getBasePath()));
-$routersContainer->addRouter(new Fabiom\UDDemo\Controllers\CustomRouter($setup->getBasePath()));
-$routersContainer->setDefaultController($defaultController);
-
+require 'index_controllers.php';
 $controller = $routersContainer->getController($request->getAction());
 
 $jsonloader = new Fabiom\UglyDuckling\Common\Json\JsonLoader();
@@ -76,6 +68,8 @@ $pageStatus->setFilesParameters($_FILES);
 $pageStatus->setDbconnection($dbconnection);
 $pageStatus->setQueryExecutor($queryExecutor);
 
+require 'index_json_tag_templates.php';
+
 $applicationBuilder = new Fabiom\UglyDuckling\Common\Status\ApplicationBuilder;
 $applicationBuilder->setRouterContainer($routersContainer);
 $applicationBuilder->setSetup($setup);
@@ -91,8 +85,11 @@ $applicationBuilder->setJsonTemplateFactoriesContainer($jsonTemplateFactoriesCon
 $queryExecutor->setPageStatus($pageStatus);
 $queryExecutor->setApplicationBuilder($applicationBuilder);
 
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory(new Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonDefaultTemplateFactory($applicationBuilder, $pageStatus));
-$jsonTemplateFactoriesContainer->addJsonTemplateFactory(new Fabiom\UDDemo\JsonTemplates\CustomJsonTemplateFactory($applicationBuilder, $pageStatus));
+require 'index_groups.php';
+require 'index_json_resources.php';
+require 'index_static_pages.php';
+require 'index_use_cases.php';
+require 'index_json_resource_templates.php';
 
 if ($sessionWrapper->isUserLoggedIn()) {
     $controller->makeAllPresets($applicationBuilder, $pageStatus);

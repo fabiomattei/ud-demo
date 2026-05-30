@@ -2,13 +2,13 @@
   "name": "index",
   "metadata": { "type":"index", "version": "1" },
   "scripts": [
-    { "path":"./Json/extentions/articleexportv1.json", "type":"export", "name":"articleexportv1" },
-    { "path":"./Json/extentions/articleinfov1.json", "type":"info", "name":"articleinfov1" },
-    { "path":"./Json/extentions/articleschartv1.json", "type":"chartjs", "name":"articleschartv1" },
-    { "path":"./Json/extentions/articlesdashboard.json", "type":"dashboard", "name":"articlesdashboard" },
-    { "path":"./Json/extentions/articlesearchformv1.json", "type":"form", "name":"articlesearchformv1" },
-    { "path":"./Json/extentions/articlesearchresultstablev1.json", "type":"table", "name":"articlesearchresultstablev1" },
-    { "path":"./Json/extentions/lastarticleinfov1.json", "type":"info", "name":"lastarticleinfov1" },
-    { "path":"./Json/extentions/smallarticlestable.json", "type":"table", "name":"smallarticlestable" }
+    { "path":"./src/Json/extentions/articleexportv1.json", "type":"export", "name":"articleexportv1" },
+    { "path":"./src/Json/extentions/articleinfov1.json", "type":"info", "name":"articleinfov1" },
+    { "path":"./src/Json/extentions/articleschartv1.json", "type":"chartjs", "name":"articleschartv1" },
+    { "path":"./src/Json/extentions/articlesdashboard.json", "type":"dashboard", "name":"articlesdashboard" },
+    { "path":"./src/Json/extentions/articlesearchformv1.json", "type":"form", "name":"articlesearchformv1" },
+    { "path":"./src/Json/extentions/articlesearchresultstablev1.json", "type":"table", "name":"articlesearchresultstablev1" },
+    { "path":"./src/Json/extentions/lastarticleinfov1.json", "type":"info", "name":"lastarticleinfov1" },
+    { "path":"./src/Json/extentions/smallarticlestable.json", "type":"table", "name":"smallarticlestable" }
   ]
 }
