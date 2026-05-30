@@ -1,6 +1,6 @@
 <?php
 
-namespace Fabiom\UDDemo\Custom\HTMLBlocks;
+namespace Fabiom\UDDemo\HTMLBlocks;
 
 use Fabiom\UglyDuckling\Common\Blocks\BaseHTMLBlock;
 

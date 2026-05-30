@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57931225ae0bc6f5619d407ada86599d",
+    "content-hash": "def01ee52943f28c064fdf74efcb89a9",
     "packages": [
         {
             "name": "fabiomattei/uglyduckling",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabiomattei/uglyduckling.git",
-                "reference": "7286ffd4643a2cea05533f0eaf204b468a462605"
+                "reference": "29aa7fddef5e6674822f4058dd723df243cfdf44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/7286ffd4643a2cea05533f0eaf204b468a462605",
-                "reference": "7286ffd4643a2cea05533f0eaf204b468a462605",
+                "url": "https://api.github.com/repos/fabiomattei/uglyduckling/zipball/29aa7fddef5e6674822f4058dd723df243cfdf44",
+                "reference": "29aa7fddef5e6674822f4058dd723df243cfdf44",
                 "shasum": ""
             },
             "require": {
@@ -26,6 +26,7 @@
             },
             "require-dev": {
                 "etsy/phan": "^4.0",
+                "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^8"
             },
             "default-branch": true,
@@ -55,7 +56,7 @@
                 "issues": "https://github.com/fabiomattei/uglyduckling/issues",
                 "source": "https://github.com/fabiomattei/uglyduckling/tree/master"
             },
-            "time": "2023-03-16T17:33:38+00:00"
+            "time": "2026-05-27T13:45:50+00:00"
         },
         {
             "name": "wixel/gump",
@@ -63,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wixel/GUMP.git",
-                "reference": "6ce1114cfbb301d2ab3ddf6846b92100ccf048e2"
+                "reference": "a54df210589c814c6c4f1d2d9f2de9ab79abd5eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/6ce1114cfbb301d2ab3ddf6846b92100ccf048e2",
-                "reference": "6ce1114cfbb301d2ab3ddf6846b92100ccf048e2",
+                "url": "https://api.github.com/repos/Wixel/GUMP/zipball/a54df210589c814c6c4f1d2d9f2de9ab79abd5eb",
+                "reference": "a54df210589c814c6c4f1d2d9f2de9ab79abd5eb",
                 "shasum": ""
             },
             "require": {
@@ -80,6 +81,7 @@
                 "php": ">=7.1"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
                 "kamermans/docblock-reflection": "^1.0",
                 "maddhatter/markdown-table": "^1.0",
                 "mockery/mockery": "^1.3",
@@ -104,7 +106,7 @@
             "authors": [
                 {
                     "name": "Sean Nieuwoudt",
-                    "homepage": "https://wixelhq.com"
+                    "homepage": "https://underwulf.com"
                 },
                 {
                     "name": "Filis Futsarov",
@@ -112,7 +114,6 @@
                 }
             ],
             "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data.",
-            "homepage": "https://wixelhq.com/",
             "keywords": [
                 "validate",
                 "validation",
@@ -122,7 +123,7 @@
                 "issues": "https://github.com/Wixel/GUMP/issues",
                 "source": "https://github.com/Wixel/GUMP/tree/master"
             },
-            "time": "2023-03-02T13:40:45+00:00"
+            "time": "2025-11-28T21:11:39+00:00"
         }
     ],
     "packages-dev": [],
@@ -133,11 +134,11 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
-        "php": "7.4",
+        "php": "8.2",
         "ext-gd": "2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.9.0"
 }

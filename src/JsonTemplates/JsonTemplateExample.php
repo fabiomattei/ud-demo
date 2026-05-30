@@ -3,7 +3,7 @@
 namespace Fabiom\UDDemo\JsonTemplates;
 
 use Fabiom\UglyDuckling\Common\Json\JsonTemplates\JsonTemplate;
-use Fabiom\UglyDuckling\Custom\HTMLBlocks\HTMLBlockExample;
+use Fabiom\UDDemo\HTMLBlocks\HTMLBlockExample;
 
 class JsonTemplateExample extends JsonTemplate {
 

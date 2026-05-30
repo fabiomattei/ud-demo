@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8.2-apache
 
 LABEL maintainer="Fabio Mattei"
 # COPY index.php /var/www/html
